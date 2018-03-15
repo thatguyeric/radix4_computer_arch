@@ -1,0 +1,8 @@
+lw      17000  r1
+lw      17000  r2
+ext     r1 r2
+twc     r2 r3
+add     r2 r2 r4
+twc     r4 r5
+lut     r1
+pop     r1
