@@ -7,14 +7,15 @@
 def open_file(f):
     file = open(f, 'r').read().lower().split('\n')
     for i in file:
-        instructions.append(i.split())
+        if i:
+            instructions.append(i.split()) 
 
 
 def print_error(inst, line):
     error = inst + " on line " + str(line) + " is not a valid instruction"
     print(error)
     exit(1)
-    
+
 
 def store_to_reg(reg, value):
     global r1, r2, r3, r4, r5
